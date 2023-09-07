@@ -1,0 +1,19 @@
+    public function getCreate(){
+        cekAjax();
+        return View::make('{module}::create');
+    }
+
+    public function postCreate(){
+        cekAjax();
+        $input = Input::all();
+        $validation = \Validator::make($input, {Module}Model::$rules);
+        if ($validation->passes()){
+            $input['user_id'] = \Session::get('user_id');
+            $input['role_id'] = \Session::get('role_id');
+            echo ($this->{module}->create($input))?1:"Gagal Disimpan";
+        }
+        else{
+            echo 'Input tidak valid';
+        }
+    }
+

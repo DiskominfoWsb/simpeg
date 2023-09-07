@@ -1,0 +1,15 @@
+    public function getIndex(){
+        cekAjax();
+        if (Input::has('search')) {
+            if(strlen(Input::has('search')) > 0){
+                ${module}s = $this->{module}
+                {fields}
+                ->paginate($_ENV['configurations']['list-limit']);
+            }else{
+                ${module}s = $this->{module}->all();
+            }
+        }else{
+            ${module}s = $this->{module}->all();
+        }
+        return View::make('{module}::index', compact('{module}s'));
+    }

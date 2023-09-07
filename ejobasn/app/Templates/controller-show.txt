@@ -1,0 +1,4 @@
+    public function getShow($id){
+        ${module} = $this->{module}->findOrFail($id);
+        return View::make('{module}::show', compact('{module}'));
+    }

@@ -1,0 +1,13 @@
+    public function postDelete(){
+        cekAjax();
+        $ids = Input::get('id');
+        if (is_array($ids)){
+            foreach($ids as $id){
+                $this->{module}->find($id)->delete();
+            }
+            echo 'Data berhasil dihapus';
+        }
+        else{
+            echo ($this->{module}->find($ids)->delete())?9:0;
+        }
+    }

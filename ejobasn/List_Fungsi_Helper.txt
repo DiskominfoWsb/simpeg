@@ -1,0 +1,72 @@
+Fungsi di helper
+1.uang(integer)
+    format pemisah ribuan
+2.get_duplicate_array(array)
+    mendapatkan member array yang duplikat
+3.remove_letter(string)
+    menghilangkan huruf dalam string
+4.debug(param,boolean)
+    debug suatu variable, true maka program akan berhenti. false maka akan lanjut
+5.spasi(integer)
+    cetak spasi sekian karakter
+6.get_client_ip()
+    mendapatkan ip client
+7.formatTanggalPanjang(YYYY-MM-DD)
+    merubah format yyyy-mm-dd menjadi dd-mmmm-yyyy
+8.formatBulanTahun(YYYY-MM-DD)
+    merubah format yyyy-mm-dd menjadi mmmm-yyyy
+9.tanggal
+    sama dengan formatTanggalPanjang
+10.romawi(integer)
+    merubah integer jadi angka romawi
+11.combo_jnskelamin($id ='',$selected="")
+    memberikan combo jenis kelamin, harus diecho
+12.select_hari($id = 0,$selected='')
+    menampilkan select box hari
+13.array_hari
+    memberikan kembalian berupa array hari
+14.tanggal_indonesia()
+    memberikan tanggal sekarang dalam bentuk dd mmmm yyyy. Exp : 11 Januari 2017
+15.sekarang()
+    memberikan tanggal sekarang dalam bentuk datetime
+16.modal(boolean, id_modal)
+    you know lah cara pakainya
+17.catat_log($aksi = '',$modul='')
+    mencatat aksi user ke log
+18.header_dokumen()
+    kasih css ke laman html
+19.hari(integer)
+    merubah angka jadi hari, misal 1 = senen, 2 = selasa
+20.konversi_hari(date)
+    mendapatkan hari dari suatu tanggal, misal 1992-04-18 menghasilkan Saturday
+21.cekLogin()
+    mengecek apakah user dalam keadaan login
+21.cekAjax()
+    mengecek apakah request url dilakukan by ajax atau tidak
+22.get_role()
+    mendapatkan role id
+23.user_id()
+    Mendapatkan user id
+24.inputWarna($id='',$selected="")
+    memberikan input select box color chart
+25.isSecure()
+    cek apakah url aplikasi itu https atau tidak
+26.ambil_angka(string)
+    mengambil angka dalam suatu string
+27.getBrowser()
+    mendapatkan browser client
+28.uang_akhir(integer)
+    merubah angka biasa jadi nominal uang standard akuntansi (jika minus maka angka akan diapit tanda kurung)
+29.number_format_persen($nominal,$desimal = 0)
+    merubah angka $nominal menjadi format persen (tambahi tanda persen di belakang) dengan angka di belakang koma sejumlah $desimal
+30.th(array, boolean)
+    merubah array menjadi table header. parameter kedua diisi true jika mau diapit dengan tag <tr></tr>
+31.td(array, boolean)
+    merubah array menjadi table row. parameter kedua diisi true jika mau diapit dengan tag <tr></tr>
+32.array_msort($array, $cols)
+    mengurutkan multidimensional array
+    contoh ada array ini $r = array(array('kode' => '1', 'nama' => 'b'), array('kode' => '1', 'nama' => 'b'))
+    pengurutan berdasar kode Ascending, Nama Descending 
+    $r_new = array_msort($r, array('kode' => SORT_ASC, 'nama'=>SORT_DESC))
+33. \ClaravelHelpers::terbilang(integer)
+    Fungsi terbilang

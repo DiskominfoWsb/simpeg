@@ -1,0 +1,18 @@
+@extends(Request::ajax() ? 'ajax' : 'index')
+
+@section('content')
+		
+<?php
+$uri = Request::path();
+?>
+
+		
+		  <h2 class="page-heading">Show {Module}
+		  	<div class="pull-right btn-group">
+			    <button type="button" class="btn btn-primary" onclick="location.href='{{ URL::to($uri) }}/create'"><span class="glyphicon glyphicon-plus-sign"></span> Create New</button>
+			</div>	
+		  </h2>
+          
+          
+
+@stop

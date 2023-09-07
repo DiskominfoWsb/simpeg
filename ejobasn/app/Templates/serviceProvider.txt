@@ -1,0 +1,26 @@
+<?php namespace {Namespace}\{Context}\{Module};
+
+
+/**
+* {Module} Service Provider
+* @var {Module}
+* Generate from claravel by Ayudhien. 
+*
+* Developed by Dinustek. 
+* Please write log when you do some modification, don't change anything unless you know what you do
+* Semarang, 2014
+*/
+
+class {Module}ServiceProvider extends \Illuminate\Support\ServiceProvider {
+
+	public function register()
+	{
+		$this->app->booting(function()
+		{
+			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+			$loader->alias('{Module}Model', '{Namespace}\{Context}\{Module}\Models\{Module}Model');
+			$loader->alias('{Module}Controller', '{Namespace}\{Context}\{Module}\Controllers\{Module}Controller');
+		});
+	}
+
+}

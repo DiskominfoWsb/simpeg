@@ -1,0 +1,23 @@
+    public function getEdit($id = false){
+        cekAjax();
+        $id = ($id == false)?Input::get('id'):'';
+        ${module} = $this->{module}->find($id);
+        //if (is_null(${module})){return \Redirect::to('{context}/{module}/index');}
+        return View::make('{module}::edit', compact('{module}'));
+    }
+    
+    public function postEdit(){
+        cekAjax();
+        $id = Input::get('id');
+        $input = Input::all();
+        $validation = \Validator::make($input, {Module}Model::$rules);
+        
+        if ($validation->passes()){
+            ${module} = $this->{module}->find($id);
+            echo (${module}->update($input))?4:"Gagal Disimpan";
+        }
+        else{
+            echo 'Input tidak valid';
+        }
+    }
+

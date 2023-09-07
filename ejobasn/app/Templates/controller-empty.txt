@@ -1,0 +1,41 @@
+<?php namespace {Namespace}\{context}\{module}\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Modules\{context}\{module}\Models\{Module}Model;
+use Input,View, Request, Form, File;
+
+class {Module}Controller extends Controller {
+
+	/**
+	 * {Module} Repository
+	 *
+	 * @var {Module}
+	 */
+	protected ${module};
+
+	public function __construct()
+	{
+	
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
+	public function getIndex()
+	{
+		cekAjax();
+		return View::make('{module}::index');
+	}
+
+		/**
+	 * Show the form for creating a new resource.
+	 *
+	 * @return Response
+	 */
+	public function getCreate()
+	{
+		return View::make('{module}::create');
+	}
+}

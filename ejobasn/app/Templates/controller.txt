@@ -1,0 +1,33 @@
+<?php namespace {Namespace}\{context}\{module}\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Modules\{context}\{module}\Models\{Module}Model;
+use Input,View, Request, Form, File;
+
+/**
+* {Module} Controller
+* @var {Module}
+* Generate from Custom Laravel 5.1 by Aa Gun. 
+*
+* Developed by Divisi Software Development - Dinustek. 
+* Please write log when you do some modification, don't change anything unless you know what you do
+* Semarang, 2016
+*/
+
+class {Module}Controller extends Controller {
+    protected ${module};
+
+    public function __construct({Module}Model ${module}){
+        $this->{module} = ${module};
+    }
+
+    {controller-index}
+
+    {controller-create}
+
+    //{controller-show}
+
+    {controller-edit}
+	
+    {controller-delete}
+}
