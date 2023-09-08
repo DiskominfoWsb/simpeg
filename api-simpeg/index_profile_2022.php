@@ -1,6 +1,6 @@
 <?php
 	set_time_limit(0);
-    // header('Access-Control-Allow-Origin: *')tamabahi satu;
+    // header('Access-Control-Allow-Origin: *')tamabahi satu lagi;
     ini_set('memory_limit', '10048M');
     
     $mysqli = new mysqli("10.0.1.9","simpeg","P3g4w41asnWSBdb2023","simpeg_v19");
