@@ -2,11 +2,11 @@
 	set_time_limit(0);
     ini_set('memory_limit', '10048M');
     
-    $mysqli = new mysqli("10.0.1.9","simpeg","EqeHxpnrhjvASFun","simpeg_v19");
+    $mysqli = new mysqli("10.0.1.9","simpeg","P3g4w41asnWSBdb2023","simpeg_v19");
 
     $host = '10.0.1.9';
 	$user = 'simpeg';
-	$pass = 'EqeHxpnrhjvASFun';
+	$pass = 'P3g4w41asnWSBdb2023';
     
     
     
