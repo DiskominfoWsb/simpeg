@@ -14,7 +14,7 @@
 	$sim_card = 'tree'; // {tree, simpati, xls, indosat}
 	$host = 'localhost';
 	$user = 'simpeg';
-	$pass = 'EqeHxpnrhjvASFun';
+	$pass = 'P3g4w41asnWSBdb2023';
 
 	
 
