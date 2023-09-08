@@ -1,0 +1,40 @@
+php_value magic_quotes 0
+php_flag magic_quotes off
+php_value magic_quotes_gpc 0
+php_flag magic_quotes_gpc off
+
+php_flag opcache.enable Off
+php_flag xcache.cacher Off
+php_flag xcache.size 0
+php_flag xcache.stat Off
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+    RewriteBase /v19
+    
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<Files "artisan">
+Order Allow,Deny
+Deny from all
+</Files>
+
+<IfModule mod_php5.c>
+   php_value short_open_tag 1
+    php_value upload_max_filesize 1500M
+    php_value post_max_size 1500M
+    php_value memory_limit 1500M
+    php_value max_execution_time 600
+    php_value max_input_time 600
+</IfModule>
