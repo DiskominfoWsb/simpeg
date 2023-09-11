@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'simpeg';
-$db['default']['password'] = 'P3g4w41WSB2023%';
+$db['default']['password'] = 'P3g4w41asnWSBdb2023';
 $db['default']['database'] = 'statistik_asn';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
