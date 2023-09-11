@@ -50,7 +50,11 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = '10.0.1.9';
 $db['default']['username'] = 'simpeg';
+<<<<<<< HEAD
+$db['default']['password'] = 'P3g4w41WSB2023%';
+=======
 $db['default']['password'] = 'P3g4w41asnWSBdb2023';
+>>>>>>> 9a89b338a455c725c2d5e9fb4778898772302985
 $db['default']['database'] = 'statistik_asn';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
