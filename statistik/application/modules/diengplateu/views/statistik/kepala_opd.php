@@ -12,7 +12,7 @@
             <?php
                 $x = 0;
 
-                $rs = $this->db->query("SELECT a.skpd,b.nama from a_skpd a
+                $rs = $this->db->query("SELECT a.skpd,concat(if(a.gdp='','',concat(a.gdp,' ')),a.nama,if(a.gdb='','',concat(', ',a.gdb)))as nama from a_skpd a
                 left join tb_01 b on a.idskpd=b.idskpd
                 WHERE  length(a.idskpd)='2' and a.flag='1' and b.idjenkedudupeg not in('21','99') and b.idesljbt in('21','22','31') or (a.idskpd like'01.%' and b.idjenkedudupeg not in('21','99'))
                 or (a.idskpd like'02.%' and b.idjenkedudupeg not in('21','99') and b.idesljbt='31')");
@@ -20,7 +20,7 @@
                     $x++;
                     ?>
                 <tr>
-                    <td><?php $x?></td>
+                    <td><?php echo $x?></td>
                     <td><?php echo $item->skpd?></td>
                     <td><?php echo $item->nama?></td>
                 </tr>
