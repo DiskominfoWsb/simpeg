@@ -55,16 +55,13 @@
 						
                         <li>
                             <a href="<?php echo base_url()?>diengplateu/page/statistik/statumum"><i class="fa fa-bar-chart-o fa-fw"></i> &nbsp; Data Statistik Kepegawaian</a>
-                            
-							
-							
-							
-							
-							
-							
                             <!-- /.nav-second-level -->
                         </li>
 						
+                        <li>
+                            <a href="<?php echo base_url()?>diengplateu/page/statistik/kepala_opd"><i class="fa fa-bar-chart-o fa-fw"></i> &nbsp; Data Kepala OPD</a>
+                            <!-- /.nav-second-level -->
+                        </li>
 						
 						
 						
