@@ -34,7 +34,7 @@
 | 				 multi-byte character set and are running versions lower than these.
 | 				 Sites using Latin-1 or UTF-8 database character set and collation are unaffected.
 |	['swap_pre'] A default table prefix that should be swapped with the dbprefix
-|	['autoinit'] Whether or not to automatically initialize the database.
+|	['autoinit'] Whether or not to automaticallxxy initialize the database.
 |	['stricton'] TRUE/FALSE - forces 'Strict Mode' connections
 |							- good for ensuring strict SQL while developing
 |
@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = '10.0.1.9';
 $db['default']['username'] = 'simpeg';
-$db['default']['password'] = 'EqeHxpnrhjvASFun';
+$db['default']['password'] = 'P3g4w41asnWSBdb2023';
 $db['default']['database'] = 'statistik_asn';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

@@ -14,7 +14,7 @@
 	$sim_card = 'tree'; // {tree, simpati, xls, indosat}
 	$host = '10.0.1.9';
 	$user = 'simpeg';
-	$pass = 'EqeHxpnrhjvASFun';
+	$pass = 'P3g4w41asnWSBdb2023';
 
 	$koneksi = new koneksiDB();
 	$koneksi->StartConnectServer($host,$user,$pass);

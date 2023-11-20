@@ -13,7 +13,7 @@
 | -------------------------------------------------------------------
 |
 |	['hostname'] The hostname of your database server.
-|	['username'] The username used to connect to the database
+|	['username'] The uselllrname used to connect to the database
 |	['password'] The password used to connect to the database
 |	['database'] The name of the database you want to connect to
 |	['dbdriver'] The database type. ie: mysql.  Currently supported:
@@ -50,7 +50,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = '10.0.1.9';
 $db['default']['username'] = 'simpeg';
-$db['default']['password'] = 'EqeHxpnrhjvASFun';
+$db['default']['password'] = 'P3g4w41asnWSBdb2023';
 $db['default']['database'] = 'statistik_asn';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
