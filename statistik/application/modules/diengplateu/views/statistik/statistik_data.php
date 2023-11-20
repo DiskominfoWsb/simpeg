@@ -47,7 +47,6 @@
                 case "statmarital" : $this->load->view('diengplateu/statistik/statistik_statmarital'); break;
                 case "statkartu" : $this->load->view('diengplateu/statistik/statistik_statkartu'); break;
                 case "statumum" : $this->load->view('diengplateu/statistik/statistik_statumum'); break;
-                case "kepala_opd" : $this->load->view('diengplateu/statistik/kepala_opd'); break;
             }
         ?>
     </div>
