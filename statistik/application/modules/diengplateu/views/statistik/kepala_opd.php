@@ -22,7 +22,7 @@
             <?php
                 $x = 0;
 
-                $rs = $this->db->query("SELECT a.skpd,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama, c.pangkat,c.golru,d.esl as eselon,e.jenjurusan,if(b.gdb='','',concat(', ',b.gdb)))as nama from a_skpd a
+                $rs = $this->db->query("SELECT a.skpd,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, e.jenjurusan from a_skpd a
                 left join tb_01 b on a.idskpd=b.idskpd
                 left join a_golruang c on a.idgolrupkt=c.idgolru
                 left join a_esl d on a.idesljbt=d.idesl
