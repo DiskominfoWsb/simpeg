@@ -36,7 +36,7 @@
                     <td align="center"><?php echo $x?></td>
                     <td><?php echo $item->skpd?></td>
                     <td><?php echo $item->nama?></td>
-                    <td align="center"><?php echo $item->pangkat.<br>.$item->golru?></td>
+                    <td align="center"><?php echo $item->pangkat."<br>".$item->golru?></td>
                     <td align="center"><?php echo $item->eselon?></td>
                     <td align="center"><?php echo $item->jenjurusan?></td>
                 </tr>
