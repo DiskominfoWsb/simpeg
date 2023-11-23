@@ -1,8 +1,8 @@
-<?php
-    $filename = $filename."data_kepala_opd.xls";
+
+ /*    $filename = $filename."data_kepala_opd.xls";
 	header("Content-Disposition: attachment; filename=\"$filename\"");
-	header("Content-Type: application/vnd.ms-excel");	
-?>
+	header("Content-Type: application/vnd.ms-excel");	 */
+
 
 <div class="row">
     <div class="col-lg-12">
