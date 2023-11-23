@@ -6,6 +6,12 @@
 </div>
 
 <div class="row">
+<form action="<?=base_URL()?>diengplateu/download_excell" target="blank" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+<button type="submit" class="btn btn-sm btn-primary btn-sidebar">Download</button>
+</form>
+</div>
+
+<div class="row">
     <div class="span5">
         <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
             <thead>
