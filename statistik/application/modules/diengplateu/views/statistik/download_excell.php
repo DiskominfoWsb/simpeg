@@ -1,9 +1,42 @@
 
- /*    $filename = $filename."data_kepala_opd.xls";
+ <!-- /*    $filename = $filename."data_kepala_opd.xls";
 	header("Content-Disposition: attachment; filename=\"$filename\"");
-	header("Content-Type: application/vnd.ms-excel");	 */
+	header("Content-Type: application/vnd.ms-excel");	 */ -->
+    <!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <title>Data Kepala OPD</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <meta name="author" href="dinustek">
+    <link rel="shortcut icon" href="<?php echo $def_img?>favicon.png">
 
+    <link rel="stylesheet" type="text/css" href="<?php echo $def_css?>font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $def_css?>main.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php echo $def_css?>theming.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="<?php echo $def_css?>outdatedbrowser.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $def_css?>select2.css" rel="stylesheet">
 
+    <script type="text/javascript" src="<?php echo $def_js?>jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="<?php echo $def_js?>bootstrap.min.js"></script>
+	<script src="<?php echo $def_js?>highcharts.js"></script>
+	<script src="<?php echo $def_js?>modules/exporting.js"></script>
+    <!-- DataTables JavaScript -->
+    <script src="<?php echo $def_js?>jquery.dataTables.js"></script>
+    <script src="<?php echo $def_js?>dataTables.bootstrap.js"></script>
+    <script src="<?php echo $def_js?>outdatedbrowser.min.js"></script>
+    <script src="<?php echo $def_js?>select2.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">Daftar Kepala OPD Per <?php echo date('d F Y')?></h1>
