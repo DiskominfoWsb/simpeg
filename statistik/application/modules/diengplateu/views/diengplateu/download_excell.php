@@ -1,8 +1,4 @@
-<?php 
-    $filename = $filename."data_kepala_opd.xls";
-	header("Content-Disposition: attachment; filename=\"$filename\"");
-	header("Content-Type: application/vnd.ms-excel");	
-?>
+
 
 <div class="row">
     <div class="col-lg-12">
@@ -14,7 +10,7 @@
 
 <div class="row">
     <div class="span5">
-        <table border="1" width="100%" id="tb-statistik">
+        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
