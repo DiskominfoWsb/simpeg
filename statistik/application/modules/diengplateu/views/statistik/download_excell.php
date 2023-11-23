@@ -2,6 +2,8 @@
  <!-- /*    $filename = $filename."data_kepala_opd.xls";
 	header("Content-Disposition: attachment; filename=\"$filename\"");
 	header("Content-Type: application/vnd.ms-excel");	 */ -->
+
+
     <!DOCTYPE html>
 <html dir="ltr">
   <head>
@@ -47,7 +49,7 @@
 
 <div class="row">
     <div class="span5">
-        <table border="1" width="100%" id="tb-statistik">
+        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -62,7 +64,7 @@
             <?php
                 $x = 0;
 
-                $rs = $this->db->query("SELECT a.skpd,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, e.jenjurusan from a_skpd a
+                $rs = $this->db->query("SELECT a.jab,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, e.jenjurusan from a_skpd a
                 left join tb_01 b on a.idskpd=b.idskpd
                 left join a_golruang c on b.idgolrupkt=c.idgolru
                 left join a_esl d on b.idesljbt=d.idesl
@@ -74,7 +76,7 @@
                     ?>
                 <tr>
                     <td align="center"><?php echo $x?></td>
-                    <td><?php echo $item->skpd?></td>
+                    <td><?php echo $item->jab?></td>
                     <td><?php echo $item->nama?></td>
                     <td align="center"><?php echo $item->pangkat."<br>".$item->golru?></td>
                     <td align="center"><?php echo $item->eselon?></td>
