@@ -1,4 +1,5 @@
-<?php
+<?php 
+    $this->template->load($themes.'header',$themes.'header'); 
     $filename = $filename."data_kepala_opd.xls";
 	header("Content-Disposition: attachment; filename=\"$filename\"");
 	header("Content-Type: application/vnd.ms-excel");	
