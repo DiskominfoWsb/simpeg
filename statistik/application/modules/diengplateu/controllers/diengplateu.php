@@ -4,6 +4,7 @@
 			parent::__construct();
             $this->load->model('diengplateu/user');
             $this->load->model('diengplateu/siemodel');
+            $this->load->library('cetak_pdf');
 			$this->user->ceklogin();
 		}
 		
