@@ -6,13 +6,12 @@
 		}
 		
 		function index(){
-  /*           if($this->session->userdata('is_log_diengplateu') != 1){
+            if($this->session->userdata('is_log_diengplateu') != 1){
                 $data = $this->config->item('data');
                 $this->load->view('diengplateu/login/index', $data);
             }else{
                 redirect('diengplateu');
-            } */
-            redirect('diengplateu');
+            }
 		}
 
         function login(){
