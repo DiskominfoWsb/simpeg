@@ -1,15 +1,17 @@
+
+<?php
+header("Content-type: application/vnd-ms-excel");
+header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
+?>
+
+
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Daftar Kepala OPD Per <?php echo date('d F Y')?></h1>
+        <h1 class="page-header">Daftar Kepala OPD Persen <?php echo date('d F Y')?></h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
 
-<div class="row">
- <a href="<?=base_URL()?>diengplateu/page/download_excell" target="_blank">
-<button type="submit" class="btn btn-sm btn-primary btn-sidebar">Download</button></a>
-</form>
-</div>
 
 <div class="row">
     <div class="span5">
@@ -28,7 +30,7 @@
             <?php
                 $x = 0;
 
-                $rs = $this->db->query("SELECT a.jab,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, e.jenjurusan from a_skpd a
+                $rs = $this->db->query("SELECT a.skpd,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, e.jenjurusan from a_skpd a
                 left join tb_01 b on a.idskpd=b.idskpd
                 left join a_golruang c on b.idgolrupkt=c.idgolru
                 left join a_esl d on b.idesljbt=d.idesl
@@ -40,7 +42,7 @@
                     ?>
                 <tr>
                     <td align="center"><?php echo $x?></td>
-                    <td><?php echo $item->jab?></td>
+                    <td><?php echo $item->skpd?></td>
                     <td><?php echo $item->nama?></td>
                     <td align="center"><?php echo $item->pangkat."<br>".$item->golru?></td>
                     <td align="center"><?php echo $item->eselon?></td>
@@ -51,3 +53,4 @@
         </table>
     </div>
 </div>
+
