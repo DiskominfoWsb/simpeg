@@ -6,7 +6,7 @@
 </div>
 
 <div class="row">
- <a href="<?=base_URL()?>diengplateu/page/download_excell" target="_blank">
+ <a href="<?=base_URL()?>diengplateu/page/download_excell">
 <button type="submit" class="btn btn-sm btn-primary btn-sidebar">Download</button></a>
 </form>
 </div>
