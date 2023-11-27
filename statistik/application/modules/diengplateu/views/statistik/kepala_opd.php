@@ -8,7 +8,6 @@
 <div class="row">
  <a href="<?=base_URL()?>diengplateu/page/download_excell" target="_blank">
 <button type="submit" class="btn btn-sm btn-primary btn-sidebar">Download</button></a>
-</form>
 </div>
 
 <div class="row">
