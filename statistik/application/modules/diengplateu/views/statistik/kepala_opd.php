@@ -6,8 +6,8 @@
 </div>
 
 <div class="row">
- <form action="<?=base_URL()?>diengplateu/page/download_excell" target="blank" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-<button type="submit" class="btn btn-sm btn-primary btn-sidebar">Download</button>
+ <a href="<?=base_URL()?>diengplateu/page/download_excell" target="_blank">
+<button type="submit" class="btn btn-sm btn-primary btn-sidebar">Download</button></a>
 </form>
 </div>
 
