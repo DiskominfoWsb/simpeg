@@ -30,7 +30,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
             <?php
                 $x = 0;
 
-                $rs = $this->db->query("SELECT a.skpd,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, e.jenjurusan from a_skpd a
+                $rs = $this->db->query("SELECT a.jab,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, e.jenjurusan from a_skpd a
                 left join tb_01 b on a.idskpd=b.idskpd
                 left join a_golruang c on b.idgolrupkt=c.idgolru
                 left join a_esl d on b.idesljbt=d.idesl
@@ -42,7 +42,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
                     ?>
                 <tr>
                     <td align="center"><?php echo $x?></td>
-                    <td><?php echo $item->skpd?></td>
+                    <td><?php echo $item->jab?></td>
                     <td><?php echo $item->nama?></td>
                     <td align="center"><?php echo $item->pangkat."<br>".$item->golru?></td>
                     <td align="center"><?php echo $item->eselon?></td>
