@@ -5,11 +5,11 @@
     <!-- /.col-lg-12 -->
 </div>
 
-<!-- <div class="row">
+<div class="row">
  <form action="<?=base_URL()?>diengplateu/page/download_excell" target="blank" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 <button type="submit" class="btn btn-sm btn-primary btn-sidebar">Download</button>
 </form>
-</div> -->
+</div>
 
 <div class="row">
     <div class="span5">
