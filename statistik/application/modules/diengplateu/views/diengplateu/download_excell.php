@@ -1,3 +1,8 @@
+
+<?php
+header("Content-type: application/vnd-ms-excel");
+header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
+?>
 <!DOCTYPE html>
 <head>
     <title>Statistik Data PNS Pemkab. Wonosobo</title>
@@ -20,10 +25,6 @@
 	<script src="<?php echo $def_js?>modules/exporting.js"></script>
   </head>
 <body>
-<?php
-header("Content-type: application/vnd-ms-excel");
-header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
-?>
 
 <div class="row">
     <div class="col-lg-12">
