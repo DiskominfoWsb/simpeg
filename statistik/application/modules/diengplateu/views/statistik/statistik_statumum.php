@@ -185,7 +185,7 @@
 </form>
 <div class="row">
  <a href="<?=base_URL()?>diengplateu/page/download_statistik" target="_blank">
-<button type="submit" class="btn btn-sm btn-primary btn-sidebar">Downloadan</button></a>
+<button type="submit" class="btn btn-sm btn-primary btn-sidebar">Download</button></a>
 </div>
 
 <div class="row">
