@@ -43,6 +43,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -93,6 +94,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -144,8 +146,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
-
-
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -196,8 +197,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
-
-
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -248,7 +248,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
-
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -299,6 +299,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -349,6 +350,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -399,6 +401,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -449,6 +452,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -499,6 +503,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -549,7 +554,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
-
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
@@ -600,8 +605,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
         </table>
     </div>
 </div>
-
-
+<div class="row"></div>
 <div class="row">
     <div class="span5">
         <table border="1">
