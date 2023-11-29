@@ -1,6 +1,6 @@
 <?php
 header("Content-type: application/vnd-ms-excel");
-header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
+header("Content-Disposition: attachment; filename=Data Statistik.xls");
 ?>
 
 
@@ -133,7 +133,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->idagama?></span>
+                        
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
