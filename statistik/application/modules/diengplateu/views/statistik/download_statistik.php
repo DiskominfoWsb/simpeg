@@ -11,7 +11,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -51,7 +51,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 </div>
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -102,7 +102,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 </div>
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -155,7 +155,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -208,7 +208,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -260,7 +260,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -311,7 +311,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 </div>
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -362,7 +362,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 </div>
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -413,7 +413,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 </div>
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -464,7 +464,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 </div>
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -515,7 +515,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 </div>
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -567,7 +567,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -620,7 +620,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
@@ -672,7 +672,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 <!--
 <div class="row">
     <div class="span5">
-        <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
+        <table border="1">
             <thead>
                 <tr>
                     <th width="5%"><div align="center">No. </div></th>
