@@ -260,7 +260,7 @@
                 <tr>
                     <td>
                         <?php echo $x?>
-                    </td>
+                    </td> 
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
                     <td><div class="link" align="right" data="0" jenkel="2" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlwanita)?></div></td>
