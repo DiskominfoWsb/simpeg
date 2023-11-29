@@ -1,3 +1,8 @@
+<?php
+header("Content-type: application/vnd-ms-excel");
+header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
+?>
+
 
 <div class="row">
  <a href="<?=base_URL()?>diengplateu/page/download_statistik" target="_blank">
