@@ -5,11 +5,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
 
 
 <div class="row">
- <a href="<?=base_URL()?>diengplateu/page/download_statistik" target="_blank">
-<button type="submit" class="btn btn-sm btn-primary btn-sidebar">Download</button></a>
-</div>
-
-<div class="row">
     <div class="span5">
         <table border="1">
             <thead>
@@ -35,7 +30,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->idjenkel?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->pns)?></div></td>
@@ -82,7 +76,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->idjenjab?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -186,7 +179,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $xgol?>
-                        <span class="ed1" style="display:none"><?=$item->idgolru?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -239,7 +231,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $xdik?>
-                        <span class="ed1" style="display:none"><?=$item->idtkpendid?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -291,7 +282,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $xjenjab?>
-                        <span class="ed1" style="display:none"><?=$item->idjenjab?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -342,7 +332,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->idesl?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -393,7 +382,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->iddikstru?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -444,7 +432,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->kategori?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -495,7 +482,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->kategori?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -546,7 +532,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->idjenkel?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" isguru="4" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->guru)?></div></td>
@@ -598,7 +583,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->kategori?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -651,7 +635,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $x?>
-                        <span class="ed1" style="display:none"><?=$item->idskpd?></span>
                     </td>
                     <td><?php echo $item->kategori?></td>
                     <td><div class="link" align="right" data="0" jenkel="1" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
@@ -697,7 +680,6 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 <tr>
                     <td>
                         <?php echo $xsek?>
-                        <span class="ed1" style="display:none"><?=$item->idjenkel?></span>
                     </td>
                     <td><?php echo $items->kategori?></td>
                     <td><div class="link" align="right" data="0" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($items->pns)?></div></td>
