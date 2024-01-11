@@ -28,6 +28,6 @@
         }
 	}
 	
-/* @RendyAmdani */
+/* @RendyAmdani. */
 /* End of file auth.php */
 /* Location : ../modules/diengplateu/controllers/auth.php */
