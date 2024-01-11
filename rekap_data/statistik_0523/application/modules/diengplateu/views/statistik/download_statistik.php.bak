@@ -21,7 +21,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 $idskpd = $this->input->post('idskpd');
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
-                $rs = $this->db->query("SELECT IF(idjenkel=1,'Pria',IF(idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_0523
+                $rs = $this->db->query("SELECT IF(idjenkel=1,'Pria',IF(idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_0423
                               WHERE idjenkedudupeg NOT IN (99,21) $where GROUP BY idjenkel");
                 foreach ($rs->result() as $item) {
                     $jmlall[$x]  = $item->pns;
@@ -67,7 +67,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.stspeg as kategori, a.idstspeg, SUM(IF(b.idstspeg!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idstspeg!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_stspeg a
-                      LEFT JOIN tb_0523 b ON a.idstspeg = b.idstspeg AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idstspeg");
+                      LEFT JOIN tb_0423 b ON a.idstspeg = b.idstspeg AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idstspeg");
                 foreach ($rs->result() as $item) {
                     $sumallp[$x] = $item->jmlpria;
                     $sumallw[$x] = $item->jmlwanita;
@@ -118,7 +118,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.idagama, b.idjenkel, a.agama as kategori, SUM(IF(b.idagama!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idagama!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_agama a
-                          LEFT JOIN tb_0523 b ON a.idagama = b.idagama AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idagama");
+                          LEFT JOIN tb_0423 b ON a.idagama = b.idagama AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idagama");
                 foreach ($rs->result() as $item) {
                     $sumallp[$x] = $item->jmlpria;
                     $sumallw[$x] = $item->jmlwanita;
@@ -170,7 +170,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.golru as kategori, a.idgolru, SUM(IF(b.idgolrupkt!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idgolrupkt!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_golruang a
-                      LEFT JOIN tb_0523 b ON a.idgolru = b.idgolrupkt AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idgolru");
+                      LEFT JOIN tb_0423 b ON a.idgolru = b.idgolrupkt AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idgolru");
                 foreach ($rs->result() as $item) {
                     $sumallp[$xgol] = $item->jmlpria;
                     $sumallw[$xgol] = $item->jmlwanita;
@@ -221,7 +221,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rsdik = $this->db->query("SELECT a.tkpendid as kategori, a.idtkpendid, SUM(IF(b.idtkpendid!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idtkpendid!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_tkpendid a
-                      LEFT JOIN tb_0523 b ON a.idtkpendid = b.idtkpendid AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idtkpendid");
+                      LEFT JOIN tb_0423 b ON a.idtkpendid = b.idtkpendid AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idtkpendid");
                 foreach ($rsdik->result() as $item) {
                     $sumallpdik[$xdik] = $item->jmlpria;
                     $sumallwdik[$xdik] = $item->jmlwanita;
@@ -272,7 +272,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.jenjab as kategori, a.idjenjab, SUM(IF(b.idjenjab!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idjenjab!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_jenjab a
-                      LEFT JOIN tb_0523 b ON a.idjenjab = b.idjenjab AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idjenjab");
+                      LEFT JOIN tb_0423 b ON a.idjenjab = b.idjenjab AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idjenjab");
                 foreach ($rs->result() as $item) {
                     $sumallpjab[$xjenjab] = $item->jmlpria;
                     $sumallwjab[$xjenjab] = $item->jmlwanita;
@@ -323,7 +323,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.esl as kategori, a.idesl, SUM(IF(b.idesljbt!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idesljbt!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_esl a
-                      LEFT JOIN tb_0523 b ON a.idesl = b.idesljbt AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idesl");
+                      LEFT JOIN tb_0423 b ON a.idesl = b.idesljbt AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idesl");
                 foreach ($rs->result() as $item) {
                     $sumallo[$x] = $item->jmlpria;
                     $sumallk[$x] = $item->jmlwanita;
@@ -374,7 +374,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.dikstru as kategori, a.iddikstru, SUM(IF(b.iddikstru!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.iddikstru!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_dikstru a
-                      inner JOIN tb_0523 b ON a.iddikstru = b.iddikstru AND b.idjenjab IN(20,30,40)AND b.idjenkedudupeg NOT IN (99,21)  $where GROUP BY a.iddikstru order by a.iddikstru DESC");
+                      inner JOIN tb_0423 b ON a.iddikstru = b.iddikstru AND b.idjenjab IN(20,30,40)AND b.idjenkedudupeg NOT IN (99,21)  $where GROUP BY a.iddikstru order by a.iddikstru DESC");
                 foreach ($rs->result() as $item) {
                     $sumallm[$x] = $item->jmlpria;
                     $sumallf[$x] = $item->jmlwanita;
@@ -425,7 +425,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.jabfung as kategori, a.idjabfung, SUM(IF(b.idjabfung!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idjabfung!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_jabfung a
-                      INNER JOIN tb_0523 b ON a.idjabfung = b.idjabfung AND b.idjenkedudupeg NOT IN (99,21) and b.idjenjab = '2' $where GROUP BY a.jabfung ORDER BY a.jabfung");
+                      INNER JOIN tb_0423 b ON a.idjabfung = b.idjabfung AND b.idjenkedudupeg NOT IN (99,21) and b.idjenjab = '2' $where GROUP BY a.jabfung ORDER BY a.jabfung");
                 foreach ($rs->result() as $item) {
                     $sumallp[$x] = $item->jmlpria;
                     $sumallw[$x] = $item->jmlwanita;
@@ -476,7 +476,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.jenjang as kategori, a.tingkat, SUM(IF(b.idjabfung!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idjabfung!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_jabfung a
-                      INNER JOIN tb_0523 b ON a.idjabfung = b.idjabfung AND b.idjenkedudupeg NOT IN (99,21) and b.idjenjab = '2' $where GROUP BY a.jenjang ORDER BY a.jenjang DESC");
+                      INNER JOIN tb_0423 b ON a.idjabfung = b.idjabfung AND b.idjenkedudupeg NOT IN (99,21) and b.idjenjab = '2' $where GROUP BY a.jenjang ORDER BY a.jenjang DESC");
                 foreach ($rs->result() as $item) {
                     $sumallpf[$x] = $item->jmlpria;
                     $sumallwf[$x] = $item->jmlwanita;
@@ -527,7 +527,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT IF(a.idjenkel='1','Pria','Wanita') AS kategori, a.idjenkel, SUM(IF(left(b.idjabfung, 3)=300,1,0)) AS guru, SUM(IF(left(b.idjabfung, 3)!=300,1,0)) AS nonguru  FROM a_jenkel a
-                                      LEFT JOIN tb_0523 b ON a.idjenkel = b.idjenkel WHERE b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idjenkel ORDER BY a.idjenkel");
+                                      LEFT JOIN tb_0423 b ON a.idjenkel = b.idjenkel WHERE b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idjenkel ORDER BY a.idjenkel");
                 foreach ($rs->result() as $item) {
                     $sumguru[$x] = $item->guru;
                     $sumnonguru[$x] = $item->nonguru;
@@ -578,7 +578,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND b.idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.jabfungum as kategori, a.idjabfungum, SUM(IF(b.idjabfungum!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idjabfungum!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_jabfungum a
-                      INNER JOIN tb_0523 b ON a.idjabfungum = b.idjabfungum AND b.idjenkedudupeg NOT IN (99,21) and b.idjenjab = '3' $where GROUP BY a.jabfungum ORDER BY a.jabfungum");
+                      INNER JOIN tb_0423 b ON a.idjabfungum = b.idjabfungum AND b.idjenkedudupeg NOT IN (99,21) and b.idjenjab = '3' $where GROUP BY a.jabfungum ORDER BY a.jabfungum");
                 foreach ($rs->result() as $item) {
                     $sumallp[$x] = $item->jmlpria;
                     $sumallw[$x] = $item->jmlwanita;
@@ -628,7 +628,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 $idskpd = $this->input->post('idskpd');
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND a.idskpd LIKE '$idskpd%'";
 
-                $rs = $this->db->query("SELECT b.skpd as kategori, b.idskpd, SUM(IF(a.idskpd!='' AND a.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(a.idskpd!='' AND a.idjenkel = 2,1,0)) AS jmlwanita FROM tb_0523 a
+                $rs = $this->db->query("SELECT b.skpd as kategori, b.idskpd, SUM(IF(a.idskpd!='' AND a.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(a.idskpd!='' AND a.idjenkel = 2,1,0)) AS jmlwanita FROM tb_0423 a
                       INNER JOIN skpd b ON LEFT(a.idskpd,2) = b.idskpd WHERE a.idjenkedudupeg NOT IN (99,21) $where GROUP BY LEFT(a.idskpd,2)");
                 foreach ($rs->result() as $item) {
                     $sumallpopd[$x] = $item->jmlpria;
@@ -674,7 +674,7 @@ header("Content-Disposition: attachment; filename=Data Statistik.xls");
                 $idskpd = $this->input->post('idskpd');
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND a.idskpd LIKE '$idskpd%'";
 
-                $rssek = $this->db->query("SELECT IF(a.idjenkel=1,'Pria',IF(a.idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_0523 a
+                $rssek = $this->db->query("SELECT IF(a.idjenkel=1,'Pria',IF(a.idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_0423 a
                         LEFT JOIN a_jabfungum b ON a.idjabfungum = b.idjabfungum
                         WHERE a.idjenkedudupeg NOT IN (99,21)  AND (a.niplama LIKE '%sekdes%' OR b.jabfungum = 'sekdes') $where GROUP BY a.idjenkel;");
                 foreach ($rssek->result() as $items) {

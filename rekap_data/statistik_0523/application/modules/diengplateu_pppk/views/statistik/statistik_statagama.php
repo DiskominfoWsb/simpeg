@@ -52,7 +52,7 @@
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.idagama, b.idjenkel, a.agama as kategori, SUM(IF(b.idagama!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idagama!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_agama a
-					      LEFT JOIN tb_0423 b ON a.idagama = b.idagama AND b.idjenkedudupeg NOT IN (99,21) and b.idstspeg='3' $where GROUP BY a.idagama");
+					      LEFT JOIN tb_0523 b ON a.idagama = b.idagama AND b.idjenkedudupeg NOT IN (99,21) and b.idstspeg='3' $where GROUP BY a.idagama");
                 foreach ($rs->result() as $item) {
                     $sumallp[$x] = $item->jmlpria;
                     $sumallw[$x] = $item->jmlwanita;

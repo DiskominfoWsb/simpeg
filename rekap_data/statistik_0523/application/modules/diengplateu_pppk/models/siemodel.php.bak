@@ -5,21 +5,21 @@
         }
 
         function getPegawai(){
-			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg not in (99,21)")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_0423 where idjenkedudupeg not in (99,21)")->row();
 			return $rs->jml;
 		}
 		
 		function getPns(){
-			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg not in (99,21) and idstspeg = 2")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_0423 where idjenkedudupeg not in (99,21) and idstspeg = 2")->row();
 			return $rs->jml;
 		}
 
 function getStruktural(){
-			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg not in (99,21) and idjenjab like '%0%'")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_0423 where idjenkedudupeg not in (99,21) and idjenjab like '%0%'")->row();
 			return $rs->jml;
 		}
 function getFungsional(){
-			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg not in (99,21) and idjenjab = 2")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_0423 where idjenkedudupeg not in (99,21) and idjenjab = 2")->row();
 			return $rs->jml;
 
 
@@ -28,7 +28,7 @@ function getFungsional(){
 
 
 function getPelaksana(){
-			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg not in (99,21) and idjenjab = 3")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_0423 where idjenkedudupeg not in (99,21) and idjenjab = 3")->row();
 			return $rs->jml;
 
 
@@ -38,12 +38,12 @@ function getPelaksana(){
 
 		
 		function getCpns(){
-			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg not in (99,21) and idstspeg = 1")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_0423 where idjenkedudupeg not in (99,21) and idstspeg = 1")->row();
 			return $rs->jml;
 		}
 		
 		function getPppk(){
-			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg not in (99,21) and idstspeg = 3")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_0423 where idjenkedudupeg not in (99,21) and idstspeg = 3")->row();
 			return $rs->jml;
 		}
 		
@@ -52,13 +52,13 @@ function getPelaksana(){
 			$m=date('m');
 			$d='01';
 			$gab=$y."-".$m."-".$d;
-			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg in (99,21) AND tmtpens like '%$gab%'")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_0423 where idjenkedudupeg in (99,21) AND tmtpens like '%$gab%'")->row();
 			return $rs->jml;
 		}
 
 
 function getPendsd(){
-			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg not in (99,21) and idtkpendid = 01")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_0423 where idjenkedudupeg not in (99,21) and idtkpendid = 01")->row();
 			return $rs->jml;
 		}
 		
@@ -74,7 +74,7 @@ function getPendsd(){
                 ,SUM(IF(a.idstspeg='2' AND a.idjenkedudupeg NOT IN('21','99'),1,0)) AS 'pns'
                 ,SUM(IF(a.idstspeg='1' AND a.idjenkedudupeg NOT IN('21','99'),1,0)) AS 'cpns'
                 ,SUM(IF(a.idjenkedudupeg IN('21','99'),1,0)) AS 'pensiun'
-                FROM tb_0523 a INNER JOIN a_golruang b ON a.idgolrupkt=b.idgolru
+                FROM tb_0423 a INNER JOIN a_golruang b ON a.idgolrupkt=b.idgolru
                 GROUP BY a.idgolrupkt");
             return $rs;
         }

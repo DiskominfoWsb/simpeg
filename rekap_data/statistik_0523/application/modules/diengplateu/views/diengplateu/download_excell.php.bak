@@ -31,7 +31,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
                 $x = 0;
 
                 $rs = $this->db->query("SELECT a.skpd,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, e.jenjurusan from a_skpd a
-                left join tb_0523 b on a.idskpd=b.idskpd
+                left join tb_0423 b on a.idskpd=b.idskpd
                 left join a_golruang c on b.idgolrupkt=c.idgolru
                 left join a_esl d on b.idesljbt=d.idesl
                 left join a_jenjurusan e on b.idjenjurusan=e.idjenjurusan

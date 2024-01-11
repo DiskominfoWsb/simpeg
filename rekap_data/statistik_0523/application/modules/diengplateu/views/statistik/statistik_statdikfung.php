@@ -53,7 +53,7 @@
 
                 $rs = $this->db->query("SELECT a.dikfung AS kategori, a.iddikfung, SUM(IF(c.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(c.idjenkel = 2,1,0)) AS jmlwanita FROM a_dikfung a
                         INNER JOIN r_dikfung b ON a.iddikfung = b.iddikfung
-                        INNER JOIN tb_0423 c ON b.nip = c.nip WHERE c.idjenkedudupeg NOT IN (99,21) $where GROUP BY c.idjenkel");
+                        INNER JOIN tb_0523 c ON b.nip = c.nip WHERE c.idjenkedudupeg NOT IN (99,21) $where GROUP BY c.idjenkel");
                 foreach ($rs->result() as $item) {
                     $sumallp[$x] = $item->jmlpria;
                     $sumallw[$x] = $item->jmlwanita;
