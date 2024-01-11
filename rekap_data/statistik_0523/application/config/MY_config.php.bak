@@ -7,7 +7,7 @@ $config['data']['bulan'] 	= $config['bulan'];
 
 $config['data']['site_title']  		= 'Data Statistik PNS Pemkab. Wonosobo';
 $config['data']['site_heading']		= 'Data Statistik PNS Pemkab. Wonosobo';
-$config['data']['site_copyright']	= 'Copyright &copy; '.date('Y').' Sie BKD Wonosobo. Developed by Dinustek.';
+$config['data']['site_copyright']	= 'Copyright &copy; '.date('Y').' Sie BKD Wonosobo. Developed BKD Kab. Wonosobo';
 $config['data']['site_heading1']    = 'Data Statistik PNS Pemkab. Wonosobo';
 $config['data']['site_desc']		= 'Data Statistik PNS Pemkab. Wonosobo';
 $config['data']['themes']			= 'diengplateu/diengplateu/';
