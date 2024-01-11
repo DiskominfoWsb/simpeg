@@ -87,7 +87,7 @@
         DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(a.tmtcpn)), '%Y%m')+0 as mkskr,
         DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(a.tglhr)), '%Y%m')+0 as usia,
         h.jenjurusan,a.thijaz,i.dikstru,a.thdikstru
-        from tb_0323 a force index(index_skpd)
+        from tb_0523 a force index(index_skpd)
         left join a_agama b on a.idagama=b.idagama
         left join a_golruang c on a.idgolrupkt=c.idgolru
         left join skpd d on a.idskpd=d.idskpd
