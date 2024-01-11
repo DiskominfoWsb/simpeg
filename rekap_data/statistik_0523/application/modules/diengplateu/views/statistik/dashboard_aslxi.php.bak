@@ -1,15 +1,15 @@
         <?php
-		   $rsjenkel = $this->db->query("SELECT IF(idjenkel=1,'Pria',IF(idjenkel=2,'Wanita','-')) AS kategori, COUNT(*) AS pns FROM tb_01
+		   $rsjenkel = $this->db->query("SELECT IF(idjenkel=1,'Pria',IF(idjenkel=2,'Wanita','-')) AS kategori, COUNT(*) AS pns FROM tb_0523
                   WHERE idjenkedudupeg NOT IN (99,21) GROUP BY idjenkel");
 				 
             $rsagama = $this->db->query("SELECT a.idagama, a.agama, SUM(IF(b.idagama!='',1,0)) AS jml FROM a_agama a
-                  LEFT JOIN tb_01 b ON a.idagama = b.idagama AND b.idjenkedudupeg NOT IN (99,21) GROUP BY a.idagama");
+                  LEFT JOIN tb_0523 b ON a.idagama = b.idagama AND b.idjenkedudupeg NOT IN (99,21) GROUP BY a.idagama");
 
             $rsjab = $this->db->query("SELECT a.jenjab, SUM(IF(b.idjenjab!='',1,0)) AS jml FROM a_jenjab a
-                  LEFT JOIN tb_01 b ON a.idjenjab = b.idjenjab AND b.idjenkedudupeg NOT IN (99,21) GROUP BY a.idjenjab");
+                  LEFT JOIN tb_0523 b ON a.idjenjab = b.idjenjab AND b.idjenkedudupeg NOT IN (99,21) GROUP BY a.idjenjab");
 
             $rspendidikan = $this->db->query("SELECT a.tkpendid, COUNT(*) AS jml FROM a_tkpendid a
-                  LEFT JOIN tb_01 b ON a.idtkpendid = b.idtkpendid AND b.idjenkedudupeg NOT IN (99,21) GROUP BY a.idtkpendid;");
+                  LEFT JOIN tb_0523 b ON a.idtkpendid = b.idtkpendid AND b.idjenkedudupeg NOT IN (99,21) GROUP BY a.idtkpendid;");
         ?>
 
         <script type="text/javascript">

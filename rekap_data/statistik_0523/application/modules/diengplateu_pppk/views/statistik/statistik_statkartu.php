@@ -56,7 +56,7 @@
                 $idskpd = $this->input->post('idskpd');
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
                 $rs = $this->db->query("SELECT if(a.idjenkel=1,'Pria','Wanita') as kategori, a.idjenkel, SUM(IF(b.nokarpeg!='',1,0)) AS nokarpeg,SUM(IF(b.nokarpeg='',1,0)) AS nonnokarpeg,
-                      SUM(IF(b.nokaris!='',1,0)) AS nokaris, SUM(IF(b.nokaris='',1,0)) AS nonnokaris FROM a_jenkel a LEFT JOIN tb_0523 b ON a.idjenkel = b.idjenkel
+                      SUM(IF(b.nokaris!='',1,0)) AS nokaris, SUM(IF(b.nokaris='',1,0)) AS nonnokaris FROM a_jenkel a LEFT JOIN tb_0423 b ON a.idjenkel = b.idjenkel
                       where b.idjenkedudupeg NOT IN (99,21) and b.idstspeg='3' $where GROUP BY a.idjenkel ORDER BY a.idjenkel");
                 foreach ($rs->result() as $item) {
                     $sumkarpeg[$x] = $item->nokarpeg;

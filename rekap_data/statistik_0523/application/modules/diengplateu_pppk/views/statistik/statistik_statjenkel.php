@@ -43,7 +43,7 @@
                 $idskpd = $this->input->post('idskpd');
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
-                $rs = $this->db->query("SELECT IF(idjenkel=1,'Pria',IF(idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_0523
+                $rs = $this->db->query("SELECT IF(idjenkel=1,'Pria',IF(idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_0423
                               where idjenkedudupeg NOT IN (99,21) and idstspeg='3' $where GROUP BY idjenkel");
                 foreach ($rs->result() as $item) {
                     $jmlall[$x]  = $item->pns;
