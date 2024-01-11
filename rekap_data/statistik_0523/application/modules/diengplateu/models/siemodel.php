@@ -48,8 +48,8 @@ function getPelaksana(){
 		}
 		
 		function getPensiun(){
-		    $y=date('Y');
-			$m=date('m');
+		    $y=date('2023');
+			$m=date('05');
 			$d='01';
 			$gab=$y."-".$m."-".$d;
 			$rs = $this->db->query("select count(*) as jml from tb_0523 where idjenkedudupeg in (99,21) AND tmtpens like '%$gab%'")->row();
