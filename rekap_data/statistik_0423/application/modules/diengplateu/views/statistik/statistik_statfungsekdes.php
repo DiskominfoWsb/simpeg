@@ -43,7 +43,7 @@
                 $idskpd = $this->input->post('idskpd');
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND a.idskpd LIKE '$idskpd%'";
 
-                $rs = $this->db->query("SELECT IF(a.idjenkel=1,'Pria',IF(a.idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_0423  a 
+                $rs = $this->db->query("SELECT IF(a.idjenkel=1,'Pria',IF(a.idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_0523  a 
                         LEFT JOIN a_jabfungum b ON a.idjabfungum = b.idjabfungum
                         WHERE a.idjenkedudupeg NOT IN (99,21)     AND (a.niplama LIKE '%sekdes%' OR b.jabfungum = 'sekdes') $where GROUP BY a.idjenkel;");
                 foreach ($rs->result() as $item) {
