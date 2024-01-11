@@ -2,7 +2,7 @@
 
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-    RewriteBase /statistik_0523
+    RewriteBase /rekap_data/statistik_0523
 
     #Removes access to the system folder by users.
     #Additionally this will allow you to create a System.php controller,
