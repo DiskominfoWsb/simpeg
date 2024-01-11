@@ -43,7 +43,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Statistik Data PNS Per <?php echo date('d F Y')?></h1>
+        <h1 class="page-header">Data ASN Bulan Mei 2023</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
