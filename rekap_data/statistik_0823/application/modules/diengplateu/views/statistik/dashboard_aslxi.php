@@ -22,7 +22,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik PNS BKD Wonosobo <?php echo date('Y')?>'
+                        text: 'Grafik PNS BKD Wonosobo - Agustus 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpegwonosobo'
@@ -83,7 +83,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik CPNS BKD Wonosobo <?php echo date('Y')?>'
+                        text: 'Grafik CPNS BKD Wonosobo - Agustus 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -144,7 +144,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik CPNS BKD Wonosobo <?php echo date('Y')?>'
+                        text: 'Grafik CPNS BKD Wonosobo - Agustus 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -205,7 +205,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS <?php echo date('Y')?>'
+                        text: 'Statistik PNS - Agustus 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -243,7 +243,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS <?php echo date('Y')?>'
+                        text: 'Statistik PNS - Agustus 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -281,7 +281,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS <?php echo date('Y')?>'
+                        text: 'Statistik PNS - Agustus 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -319,7 +319,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS <?php echo date('Y')?>'
+                        text: 'Statistik PNS - Agustus 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
