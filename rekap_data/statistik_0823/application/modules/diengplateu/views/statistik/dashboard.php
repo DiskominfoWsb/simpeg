@@ -511,7 +511,7 @@
 
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Data Bulan Juli 2023</h1>
+                    <h1 class="page-header">Data Bulan Agustus 2023</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

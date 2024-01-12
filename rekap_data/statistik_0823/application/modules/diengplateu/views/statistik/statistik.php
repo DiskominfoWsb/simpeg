@@ -43,7 +43,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Data ASN Bulan Juli 2023</h1>
+        <h1 class="page-header">Data ASN Bulan Agustus 2023</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
