@@ -6,7 +6,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Berdasarkan Jenis Jabatan Tahun <?php echo date('Y')?>'
+            text: 'Grafik PNS Berdasarkan Jenis Jabatan - Mei 2023'
         },
         subtitle: {
             text: 'Source: e-simpeg.bkdwonosobo.go.id'

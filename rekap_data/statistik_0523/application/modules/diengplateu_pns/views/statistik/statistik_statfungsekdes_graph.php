@@ -6,7 +6,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Sekretaris Desa Tahun <?php echo date('Y')?>'
+            text: 'Grafik PNS Sekretaris Desa - Mei 2023'
         },
         subtitle: {
             text: 'Source: e-simpeg.bkdwonosobo.go.id'
