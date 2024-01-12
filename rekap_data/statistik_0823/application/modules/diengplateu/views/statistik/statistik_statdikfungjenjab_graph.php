@@ -6,7 +6,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Berdasarkan Jabatan Fungsional Umum Bulan Agustus 2024'
+            text: 'Grafik PNS Berdasarkan Jabatan Fungsional Umum Bulan Agustus 2023'
         },
         subtitle: {
             text: 'Source: e-simpeg.bkdwonosobo.go.id'

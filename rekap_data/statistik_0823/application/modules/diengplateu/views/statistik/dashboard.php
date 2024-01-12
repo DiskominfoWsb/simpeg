@@ -359,7 +359,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Berdasarkan Golongan Bulan Agustus 2024'
+            text: 'Grafik PNS Berdasarkan Golongan Bulan Agustus 2023'
         },
         subtitle: {
             text: 'Source: simpeg.wonosobokab.go.id'
@@ -436,7 +436,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Berdasarkan Eselon Bulan Agustus 2024'
+            text: 'Grafik PNS Berdasarkan Eselon Bulan Agustus 2023'
         },
         subtitle: {
             text: 'Source: simpeg.wonosobokab.go.id'
