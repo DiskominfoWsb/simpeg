@@ -149,7 +149,7 @@
                                 Copyright &copy; <?php
   $fromYear = 2014; 
   $thisYear = (int)date('Y'); 
-  echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> BKD Kab. Wonosobo
+  echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> <br>BKD Kab. Wonosobo
                             </footer>
                         </li>
                     </ul>
