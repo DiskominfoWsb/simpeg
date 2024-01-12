@@ -6,7 +6,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Berdasarkan Status Guru Tahun <?php echo date('Y')?>'
+            text: 'Grafik PNS Berdasarkan Status Guru Bulan Agustus 2024'
         },
         subtitle: {
             text: 'Source: e-simpeg.bkdwonosobo.go.id'

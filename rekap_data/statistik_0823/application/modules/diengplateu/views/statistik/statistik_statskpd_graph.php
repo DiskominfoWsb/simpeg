@@ -6,7 +6,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Berdasarkan SKPD Tahun <?php echo date('Y')?>'
+            text: 'Grafik PNS Berdasarkan SKPD Bulan Agustus 2024'
         },
         subtitle: {
             text: 'Source: e-simpeg.bkdwonosobo.go.id'
