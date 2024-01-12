@@ -22,7 +22,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik PNS BKD Wonosobo - Agustus 2023'
+                        text: 'Grafik PNS BKD Wonosobo - Agust. 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpegwonosobo'
@@ -83,7 +83,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik CPNS BKD Wonosobo - Agustus 2023'
+                        text: 'Grafik CPNS BKD Wonosobo - Agust. 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpeg.bkdwonosobo.go.id'
@@ -144,7 +144,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik CPNS BKD Wonosobo - Agustus 2023'
+                        text: 'Grafik CPNS BKD Wonosobo - Agust. 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpeg.bkdwonosobo.go.id'
@@ -205,7 +205,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS - Agustus 2023'
+                        text: 'Statistik PNS - Agust. 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpeg.bkdwonosobo.go.id'
@@ -243,7 +243,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS - Agustus 2023'
+                        text: 'Statistik PNS - Agust. 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpeg.bkdwonosobo.go.id'
@@ -281,7 +281,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS - Agustus 2023'
+                        text: 'Statistik PNS - Agust. 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpeg.bkdwonosobo.go.id'
@@ -319,7 +319,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS - Agustus 2023'
+                        text: 'Statistik PNS - Agust. 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpeg.bkdwonosobo.go.id'
