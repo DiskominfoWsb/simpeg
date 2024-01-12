@@ -6,7 +6,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Berdasarkan Status Pernikahan Tahun <?php echo date('Y')?>'
+            text: 'Grafik PNS Berdasarkan Status Pernikahan - Des. 2023'
         },
         subtitle: {
             text: 'Source: e-simpeg.bkdwonosobo.go.id'
