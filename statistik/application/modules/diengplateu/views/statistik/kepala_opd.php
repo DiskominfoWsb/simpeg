@@ -19,7 +19,7 @@
                     <th><div align="center">Perangkat Daerah</div></th>
                     <th><div align="center">Nama Pejabat</div></th>
                     <th><div align="center">Pangkat/Gol. Ruang</div></th>
-                    <th><div align="center">Eselon</div></th>
+                    <th><div align="center">Eselon / TMT Jabatan</div></th>
                     <th><div align="center">Pendidikan</div></th>
                 </tr>
             </thead>
@@ -27,7 +27,7 @@
             <?php
                 $x = 0;
 
-                $rs = $this->db->query("SELECT a.jab,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, e.jenjurusan from a_skpd a
+                $rs = $this->db->query("SELECT a.jab,concat(if(b.gdp='','',concat(b.gdp,' ')),b.nama,if(b.gdb='','',concat(', ',b.gdb)))as nama, c.pangkat, c.golru, d.esl as eselon, b.tmtjbt as tmt_jab,e.jenjurusan from a_skpd a
                 left join tb_01 b on a.idskpd=b.idskpd
                 left join a_golruang c on b.idgolrupkt=c.idgolru
                 left join a_esl d on b.idesljbt=d.idesl
@@ -42,7 +42,7 @@
                     <td><?php echo $item->jab?></td>
                     <td><?php echo $item->nama?></td>
                     <td align="center"><?php echo $item->pangkat."<br>".$item->golru?></td>
-                    <td align="center"><?php echo $item->eselon?></td>
+                    <td align="center"><?php echo $item->eselon."<br>".$item->tmt_jab?></td>
                     <td align="center"><?php echo $item->jenjurusan?></td>
                 </tr>
             <?php } ?>
