@@ -149,8 +149,10 @@
                         </li>
                         <li class="sidebar-search">
                             <footer>
-                                &copy;2014 Kab. Wonosobo.<br>
-                                Dikembangkan oleh BKD</a>.
+                                Copyright &copy; <?php
+  $fromYear = 2014; 
+  $thisYear = (int)date('Y'); 
+  echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> <br>BKD Kab. Wonosobo
                             </footer>
                         </li>
                     </ul>

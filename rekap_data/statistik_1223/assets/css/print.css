@@ -1,0 +1,106 @@
+html,body,table {
+	font-family: 'Arial';
+	font-size: 9pt;
+	background: white;
+	line-height:1.5;
+}
+
+h1,h2,h3,h4,h5{
+	font-weight:400;
+	margin:0;
+}
+
+h2.center{
+	text-align:center;
+}
+
+
+h2.title{
+	font-size:14px;
+	font-weight:bold;
+	margin:0;
+}
+
+h2.title2{
+	font-size:18px;
+	font-weight:bold;
+	margin:0;
+}
+
+
+div.center{
+	margin:0 auto;
+}
+
+table{
+	border-collapse:collapse;
+	border-width:1px;
+	width:100%;
+}
+
+table thead tr th,table tfoot tr th{
+	background-color:#F4F4F4;
+	font-weight:bold;
+	padding:4px;
+}
+
+table tbody tr td{
+	padding:4px;
+	vertical-align:top;
+}
+
+table.gen tbody tr td{
+	/*height:40px; */
+}
+
+table tbody td div.r,table tfoot td div.r,table tfoot th div.r{
+	text-align:right;
+}
+
+	h1.center,h2.center,h3.center,h4.center{
+		text-align:center;
+	}
+	
+	div.page{
+		display:block;
+		width:100%;
+	}
+	
+	div.div-center{
+		text-align:center;
+	}
+	
+	div.clear{
+		clear:both;
+	}
+	
+	p.space-ttd{
+		line-height:3;
+	}
+	
+	div.f-left{
+		float:left;
+	}
+	
+	div.f-right{
+		float:right;
+	}
+
+	#boxContainerContainer {
+    text-align: center;
+}
+
+#boxContainer {
+    display:inline-block;
+    margin: 0px auto 10px auto;
+    text-align: left;
+}
+
+#box1,
+#box2,
+#box3 {
+    width: auto;
+    height: auto;
+    display: inline-block;
+	margin-right:20px;
+}
