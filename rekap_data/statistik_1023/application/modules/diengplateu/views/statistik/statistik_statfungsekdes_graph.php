@@ -6,7 +6,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Sekretaris Desa Tahun Sept. 2023'
+            text: 'Grafik PNS Sekretaris Desa Tahun Okt. 2023'
         },
         subtitle: {
             text: 'Source: e-simpeg.bkdwonosobo.go.id'

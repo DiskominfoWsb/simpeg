@@ -83,7 +83,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik CPNS BKD Wonosobo Sept. 2023'
+                        text: 'Grafik CPNS BKD Wonosobo Okt. 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -144,7 +144,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik CPNS BKD Wonosobo Sept. 2023'
+                        text: 'Grafik CPNS BKD Wonosobo Okt. 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -205,7 +205,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS Sept. 2023'
+                        text: 'Statistik PNS Okt. 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -243,7 +243,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS Sept. 2023'
+                        text: 'Statistik PNS Okt. 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -281,7 +281,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS Sept. 2023'
+                        text: 'Statistik PNS Okt. 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -319,7 +319,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Statistik PNS Sept. 2023'
+                        text: 'Statistik PNS Okt. 2023'
                     },
                     subtitle: {
                         text: 'Source: simpeg.wonosobokab.go.id'
@@ -359,7 +359,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Berdasarkan Golongan Tahun Sept. 2023'
+            text: 'Grafik PNS Berdasarkan Golongan Tahun Okt. 2023'
         },
         subtitle: {
             text: 'Source: simpeg.wonosobokab.go.id'
@@ -436,7 +436,7 @@
             defaultSeriesType: 'column'
         },
         title: {
-            text: 'Grafik PNS Berdasarkan Eselon Tahun Sept. 2023'
+            text: 'Grafik PNS Berdasarkan Eselon Tahun Okt. 2023'
         },
         subtitle: {
             text: 'Source: simpeg.wonosobokab.go.id'

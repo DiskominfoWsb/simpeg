@@ -83,7 +83,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik CPNS BKD Wonosobo Sept. 2023'
+                        text: 'Grafik CPNS BKD Wonosobo Okt. 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpeg.bkdwonosobo.go.id'
@@ -144,7 +144,7 @@
                         defaultSeriesType: 'column'
                     },
                     title: {
-                        text: 'Grafik CPNS BKD Wonosobo Sept. 2023'
+                        text: 'Grafik CPNS BKD Wonosobo Okt. 2023'
                     },
                     subtitle: {
                         text: 'Source: e-simpeg.bkdwonosobo.go.id'
