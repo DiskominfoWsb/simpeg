@@ -586,7 +586,7 @@
         </table>
     </div>
 </div>
-<div class="row">
+<!-- <div class="row">
     <div class="span5">
         <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
             <thead>
@@ -636,7 +636,7 @@
             </tbody>
         </table>
     </div>
-</div>
+</div> -->
 <div class="row">
     <div class="span5">
         <table class="table table-hover table-bordered" width="100%" id="tb-statistik">
