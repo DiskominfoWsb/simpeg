@@ -52,7 +52,7 @@
     $idagama = $this->input->post('idagama');
     $idskpd = $this->input->post('idskpd');
 
-    $where = " where a.idjenkedudupeg not in('99','21') ";
+    $where = " where a.idjenkedudupeg not in('99','21') and a.idstspeg=3 ";
     if($idwhere != "1") {
         $where.=" and a.idagama = \"".$idagama."\"";
         $titile_agama = " AGAMA ".$this->siemodel->getAttrdata("a_agama","idagama",$idagama,"agama");
