@@ -5,21 +5,21 @@
         }
 
         function getPegawai(){
-			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg=3")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21)")->row();
 			return $rs->jml;
 		}
 		
 		function getPns(){
-			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg=3 and idstspeg = 2")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg = 2")->row();
 			return $rs->jml;
 		}
 
 function getStruktural(){
-			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg=3 and idjenjab like '%0%'")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idjenjab like '%0%'")->row();
 			return $rs->jml;
 		}
 function getFungsional(){
-			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg=3 and idjenjab = 2")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idjenjab = 2")->row();
 			return $rs->jml;
 
 
@@ -28,7 +28,7 @@ function getFungsional(){
 
 
 function getPelaksana(){
-			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg=3 and idjenjab = 3")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idjenjab = 3")->row();
 			return $rs->jml;
 
 
@@ -38,12 +38,12 @@ function getPelaksana(){
 
 		
 		function getCpns(){
-			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg=3 and idstspeg = 1")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg = 1")->row();
 			return $rs->jml;
 		}
 		
 		function getPppk(){
-			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg=3 and idstspeg = 3")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg = 3")->row();
 			return $rs->jml;
 		}
 		
@@ -58,7 +58,7 @@ function getPelaksana(){
 
 
 function getPendsd(){
-			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idstspeg=3 and idtkpendid = 01")->row();
+			$rs = $this->db->query("select count(*) as jml from tb_1223 where idjenkedudupeg not in (99,21) and idtkpendid = 01")->row();
 			return $rs->jml;
 		}
 		

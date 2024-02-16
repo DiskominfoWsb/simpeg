@@ -1,6 +1,6 @@
         <?php
             $rsjenkel = $this->db->query("SELECT IF(idjenkel=1,'Pria',IF(idjenkel=2,'Wanita','-')) AS kategori, COUNT(*) AS pns FROM tb_1223
-                  where idjenkedudupeg not in (99,21) and idstspeg=3 GROUP BY idjenkel");
+                  where idjenkedudupeg not in (99,21) GROUP BY idjenkel");
 
             $rsagama = $this->db->query("SELECT a.idagama, a.agama, SUM(IF(b.idagama!='',1,0)) AS jml FROM a_agama a
                   LEFT JOIN tb_1223 b ON a.idagama = b.idagama AND b.idjenkedudupeg NOT IN (99,21) GROUP BY a.idagama");
