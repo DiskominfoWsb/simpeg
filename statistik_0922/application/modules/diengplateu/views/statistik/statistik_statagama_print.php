@@ -52,7 +52,7 @@
     $idagama = $this->input->post('idagama');
     $idskpd = $this->input->post('idskpd');
 
-    $where = " where a.idjenkedudupeg not in('99','21') ";
+    $where = " where a.idjenkedudupeg not in('99','21') and a.idstspeg=3 ";
     if($idwhere != "1") {
         $where.=" and a.idagama = \"".$idagama."\"";
         $titile_agama = " AGAMA ".$this->siemodel->getAttrdata("a_agama","idagama",$idagama,"agama");
@@ -88,7 +88,7 @@
         DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(a.tmtcpn)), '%Y%m')+0 as mkskr,
         DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(a.tglhr)), '%Y%m')+0 as usia,
         h.jenjurusan,a.thijaz,i.dikstru,a.thdikstru
-        from tb_0922 a force index(index_skpd)
+        from tb_1223 a force index(index_skpd)
         left join a_agama b on a.idagama=b.idagama
         left join a_golruang c on a.idgolrupkt=c.idgolru
         left join skpd d on a.idskpd=d.idskpd

@@ -48,8 +48,8 @@
                 $idskpd = $this->input->post('idskpd');
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND a.idskpd LIKE '$idskpd%'";
 
-                $rs = $this->db->query("SELECT b.skpd as kategori, b.idskpd, SUM(IF(a.idskpd!='' AND a.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(a.idskpd!='' AND a.idjenkel = 2,1,0)) AS jmlwanita FROM tb_0922 a
-                      INNER JOIN skpd b ON LEFT(a.idskpd,2) = b.idskpd WHERE a.idjenkedudupeg NOT IN (99,21) $where GROUP BY LEFT(a.idskpd,2)");
+                $rs = $this->db->query("SELECT b.skpd as kategori, b.idskpd, SUM(IF(a.idskpd!='' AND a.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(a.idskpd!='' AND a.idjenkel = 2,1,0)) AS jmlwanita FROM tb_1223 a
+                      INNER JOIN skpd b ON LEFT(a.idskpd,2) = b.idskpd WHERE a.idjenkedudupeg NOT IN (99,21) and a.idstspeg='3' $where GROUP BY LEFT(a.idskpd,2)");
                 foreach ($rs->result() as $item) {
                     $sumallp[$x] = $item->jmlpria;
                     $sumallw[$x] = $item->jmlwanita;
