@@ -3,7 +3,7 @@
 
     $(document).ready(function(){
         refreshStatistik();
-        $('#idkategori, #kdunit, #idskpd').select2();
+        $('#idkategori, #kdunit, #idskpd, #id_bulan, #id_tahun').select2();
         $('#kdunit').change(function(){
             $.ajax({
                 url:'<?php echo base_url()?>diengplateu/ajax/xkdunit',
@@ -23,6 +23,14 @@
         $('#idkategori').click(function(){
             refreshStatistik();
         });
+
+        $('#id_bulan').click(function(){
+            refreshStatistik();
+        });
+
+        $('#id_tahun').click(function(){
+            refreshStatistik();
+        });
     });
 
     function refreshStatistik(){
@@ -30,7 +38,7 @@
         xhr = $.ajax({
             url:'<?=base_url()?>diengplateu/data/statistik',
             type:'post',
-            data:{ 'idskpd':$('#idskpd').val(),'idkategori':$('#idkategori').val() },
+            data:{ 'idskpd':$('#idskpd').val(),'idkategori':$('#idkategori').val(),'id_tahun':$('#id_tahun').val(),'id_bulan':$('#id_bulan').val() },
             beforeSend:function(){
                 $('#result').html('<i class="icon-spinner icon-spin"></i> Loading...');
             },
@@ -43,7 +51,7 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Statistik Data PNS Per <?php echo date('d F Y')?></h1>
+        <h1 class="page-header">Statistik Data PNS</h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
@@ -58,8 +66,6 @@
             <!-- /.panel-heading -->
             <div class="panel-body">
                 <div class="alert-warning" style="padding: 5px">
-                    <form class="form-inline">
-                        <div align="pull-right">
                             Kategori : <?php echo $this->siemodel->listKategori("idkategori",$this->uri->segment(4),$required="");?>
                             Unit Kerja : <?php echo $this->siemodel->listSkpd2($id="kdunit",$sel="",$required="");?>
                             Sub Unit Kerja :
@@ -68,8 +74,8 @@
                                 <option value="">.: Pilih Sub Unit :.</option>
                             </select>
                         </span>
-                        </div>
-                    </form>
+                        Bulan : <?= $this->siemodel->getBulan("id_bulan",date('m')); ?>
+                        Tahun : <?= $this->siemodel->getTahun("id_tahun",date('Y')); ?>
                 </div><br>
 
                 <div id="result"></div>

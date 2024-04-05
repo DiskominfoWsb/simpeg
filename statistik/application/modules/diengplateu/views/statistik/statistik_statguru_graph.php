@@ -46,7 +46,7 @@
     $.ajax({
         url:'<?=base_url()?>diengplateu/graphGuru',
         type:'post',
-        data:{'idkategori': $('#idkategori').val(), 'idskpd': $('#idskpd').val()},
+        data:{'idkategori': $('#idkategori').val(), 'idskpd': $('#idskpd').val(),'id_tahun':$('#id_tahun').val(),'id_bulan':$('#id_bulan').val()},
         beforeSend:function(){},
         success:function(data){
             var lines = data.split('\n');

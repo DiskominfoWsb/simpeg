@@ -46,9 +46,27 @@
                 $sumallp[$x] = 0;
                 $sumallw[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND a.idskpd LIKE '$idskpd%'";
 
-                $rs = $this->db->query("SELECT b.skpd as kategori, b.idskpd, SUM(IF(a.idskpd!='' AND a.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(a.idskpd!='' AND a.idjenkel = 2,1,0)) AS jmlwanita FROM tb_01 a
+                $rs = $this->db->query("SELECT b.skpd as kategori, b.idskpd, SUM(IF(a.idskpd!='' AND a.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(a.idskpd!='' AND a.idjenkel = 2,1,0)) AS jmlwanita FROM ".$dbtable." a
                       INNER JOIN skpd b ON LEFT(a.idskpd,2) = b.idskpd WHERE a.idjenkedudupeg NOT IN (99,21) $where GROUP BY LEFT(a.idskpd,2)");
                 foreach ($rs->result() as $item) {
                     $sumallp[$x] = $item->jmlpria;

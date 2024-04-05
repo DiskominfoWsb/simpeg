@@ -49,10 +49,28 @@
                 $sumallp[$x] = 0;
                 $sumallw[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.tkpendid as kategori, a.idtkpendid, SUM(IF(b.idtkpendid!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idtkpendid!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_tkpendid a
-                      LEFT JOIN tb_01 b ON a.idtkpendid = b.idtkpendid AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idtkpendid");
+                      LEFT JOIN ".$dbtable." b ON a.idtkpendid = b.idtkpendid AND b.idjenkedudupeg NOT IN (99,21) $where GROUP BY a.idtkpendid");
                 foreach ($rs->result() as $item) {
                     $sumallp[$x] = $item->jmlpria;
                     $sumallw[$x] = $item->jmlwanita;

@@ -1,5 +1,5 @@
 <script>
-<!--jenkel-->
+    // jenkel
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -13,7 +13,7 @@
             $('#form-print').submit();
         });
     });
-    <!--relig-->
+    // relig
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -29,7 +29,7 @@
             $('#form-print').submit();
         });
     });
-    <!--gol-->
+    // gol
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -45,7 +45,7 @@
             $('#form-print').submit();
         });
     });
-    <!--tkdik-->
+    // tkdik
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -61,7 +61,7 @@
             $('#form-print').submit();
         });
     });
-    <!--jenjab-->
+    // jenjab
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -77,7 +77,7 @@
             $('#form-print').submit();
         });
     });
-    <!--eselon-->
+    // eselon
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -93,7 +93,7 @@
             $('#form-print').submit();
         });
     });
-    <!--dikstruk-->
+    // dikstruk
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -109,7 +109,7 @@
             $('#form-print').submit();
         });
     });
-    <!--jabfung-->
+    // jabfung
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -125,7 +125,7 @@
             $('#form-print').submit();
         });
     });
-    <!--GURU NON-->
+    // GURU NON
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -140,7 +140,7 @@
             $('#form-print #idskpd').val(vidskpd);
             $('#form-print').submit();
         });
-        <!--SKPD-->
+        // SKPD
     });
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
@@ -155,7 +155,7 @@
             $('#form-print').submit();
         });
     });
-<!--SEKDS-->
+    // SEKDS
     $(document).ready(function(){
         $('#tb-statistik .link').click(function(){
             var index = $('#tb-statistik .link').index($(this));
@@ -169,7 +169,6 @@
             $('#form-print').submit();
         });
     });
-</script>
 </script>
 <style>
     .link{
@@ -203,10 +202,28 @@
                 $x = 0;
                 $jmlall[$x]  = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
-                $rs = $this->db->query("SELECT IF(idjenkel=1,'Pria',IF(idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_01
-                              WHERE idjenkedudupeg NOT IN (99,21) $where GROUP BY idjenkel");
+                $rs = $this->db->query("SELECT IF(idjenkel=1,'Pria',IF(idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM ".$dbtable."
+                              WHERE idjenkedudupeg NOT IN (99,21) $where GROUP BY idjenkel"); //jika data tdk ditemukan dikasih peringatan ga?
                 foreach ($rs->result() as $item) {
                     $jmlall[$x]  = $item->pns;
                     $x++;
@@ -247,6 +264,24 @@
                 $sumallp[$x] = 0;
                 $sumallw[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.stspeg as kategori, a.idstspeg, SUM(IF(b.idstspeg!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idstspeg!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_stspeg a
@@ -297,6 +332,24 @@
                 $sumallp[$x] = 0;
                 $sumallw[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.idagama, b.idjenkel, a.agama as kategori, SUM(IF(b.idagama!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idagama!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_agama a
@@ -349,6 +402,24 @@
                 $sumallp[$xgol] = 0;
                 $sumallw[$xgol] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.golru as kategori, a.idgolru, SUM(IF(b.idgolrupkt!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idgolrupkt!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_golruang a
@@ -401,6 +472,24 @@
                 $sumallpdik[$xdik] = 0;
                 $sumallwdik[$xdik] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rsdik = $this->db->query("SELECT a.tkpendid as kategori, a.idtkpendid, SUM(IF(b.idtkpendid!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idtkpendid!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_tkpendid a
@@ -452,6 +541,24 @@
                 $sumallpjab[$xjenjab] = 0;
                 $sumallwjab[$xjenjab] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.jenjab as kategori, a.idjenjab, SUM(IF(b.idjenjab!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idjenjab!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_jenjab a
@@ -502,6 +609,24 @@
                 $sumallo[$x] = 0;
                 $sumallk[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.esl as kategori, a.idesl, SUM(IF(b.idesljbt!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idesljbt!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_esl a
@@ -552,6 +677,24 @@
                 $sumallo[$x] = 0;
                 $sumallk[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.dikstru as kategori, a.iddikstru, SUM(IF(b.iddikstru!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.iddikstru!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_dikstru a
@@ -602,6 +745,24 @@
                 $sumallp[$x] = 0;
                 $sumallw[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.jabfung as kategori, a.idjabfung, SUM(IF(b.idjabfung!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idjabfung!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_jabfung a
@@ -652,6 +813,24 @@
                 $sumallpf[$x] = 0;
                 $sumallwf[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.jenjang as kategori, a.tingkat, SUM(IF(b.idjabfung!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idjabfung!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_jabfung a
@@ -702,6 +881,24 @@
                 $sumallw[$x] = 0;
 
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT IF(a.idjenkel='1','Pria','Wanita') AS kategori, a.idjenkel, SUM(IF(left(b.idjabfung, 3)=300,1,0)) AS guru, SUM(IF(left(b.idjabfung, 3)!=300,1,0)) AS nonguru  FROM a_jenkel a
@@ -753,6 +950,24 @@
                 $sumallp[$x] = 0;
                 $sumallw[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND b.idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT a.jabfungum as kategori, a.idjabfungum, SUM(IF(b.idjabfungum!='' AND b.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(b.idjabfungum!='' AND b.idjenkel = 2,1,0)) AS jmlwanita FROM a_jabfungum a
@@ -805,6 +1020,24 @@
                 $sumallp[$x] = 0;
                 $sumallw[$x] = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND a.idskpd LIKE '$idskpd%'";
 
                 $rs = $this->db->query("SELECT b.skpd as kategori, b.idskpd, SUM(IF(a.idskpd!='' AND a.idjenkel = 1,1,0)) AS jmlpria, SUM(IF(a.idskpd!='' AND a.idjenkel = 2,1,0)) AS jmlwanita FROM tb_01 a
@@ -851,6 +1084,24 @@
                 $xsek = 0;
                 $jmlallsek[$xsek]  = 0;
                 $idskpd = $this->input->post('idskpd');
+                $id_tahun = $this->input->post('id_tahun');
+                $id_bulan = $this->input->post('id_bulan');
+
+                if($id_tahun < date('Y')){			
+                    $db = DB_STATISTIK;
+                    $table = "tb_01_".$id_bulan."".$id_tahun;
+                }else{
+                    if($id_bulan != date('m')){
+                        $db = DB_STATISTIK;
+                        $table = "tb_01_".$id_bulan."".$id_tahun;
+                    }else{
+                        $db = $this->db->database;
+                        $table = "tb_01";
+                    }
+                }
+
+                $dbtable = $db.(($db!='')?".":"").$table;
+                
                 if($idskpd != "") $where = ($idskpd == "")?"":"AND a.idskpd LIKE '$idskpd%'";
 
                 $rssek = $this->db->query("SELECT IF(a.idjenkel=1,'Pria',IF(a.idjenkel=2,'Wanita','-')) AS kategori, idjenkel, COUNT(*) AS pns FROM tb_01 a

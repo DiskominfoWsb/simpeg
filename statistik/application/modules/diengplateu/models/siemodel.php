@@ -3,72 +3,12 @@
         function __construct(){
             parent::__construct();
         }
-
-        function getPegawai(){
-			$rs = $this->db->query("select count(*) as jml from tb_01 where idjenkedudupeg not in (99,21)")->row();
-			return $rs->jml;
-		}
 		
-		function getPns(){
-			$rs = $this->db->query("select count(*) as jml from tb_01 where idjenkedudupeg not in (99,21) and idstspeg = 2")->row();
-			return $rs->jml;
-		}
-
-function getStruktural(){
-			$rs = $this->db->query("select count(*) as jml from tb_01 where idjenkedudupeg not in (99,21) and idjenjab like '%0%'")->row();
-			return $rs->jml;
-		}
-function getFungsional(){
-			$rs = $this->db->query("select count(*) as jml from tb_01 where idjenkedudupeg not in (99,21) and idjenjab = 2")->row();
-			return $rs->jml;
-
-
-
-		}
-
-
-function getPelaksana(){
-			$rs = $this->db->query("select count(*) as jml from tb_01 where idjenkedudupeg not in (99,21) and idjenjab = 3")->row();
-			return $rs->jml;
-
-
-
-		}
-
-
-		
-		function getCpns(){
-			$rs = $this->db->query("select count(*) as jml from tb_01 where idjenkedudupeg not in (99,21) and idstspeg = 1")->row();
-			return $rs->jml;
-		}
-		
-		function getPppk(){
-			$rs = $this->db->query("select count(*) as jml from tb_01 where idjenkedudupeg not in (99,21) and idstspeg = 3")->row();
-			return $rs->jml;
-		}
-		
-		function getPensiun(){
-		    $y=date('Y');
-			$m=date('m');
-			$d='01';
-			$gab=$y."-".$m."-".$d;
-			$rs = $this->db->query("select count(*) as jml from tb_01 where idjenkedudupeg in (99,21) AND tmtpens like '%$gab%'")->row();
-			return $rs->jml;
-		}
-
-
-function getPendsd(){
+        function getPendsd(){
 			$rs = $this->db->query("select count(*) as jml from tb_01 where idjenkedudupeg not in (99,21) and idtkpendid = 01")->row();
 			return $rs->jml;
 		}
 		
-
-
-
-
-
-
-
         function getGrafikpegawai(){
             $rs = $this->db->query("SELECT b.golru, b.pangkat
                 ,SUM(IF(a.idstspeg='2' AND a.idjenkedudupeg NOT IN('21','99'),1,0)) AS 'pns'
@@ -128,6 +68,44 @@ function getPendsd(){
             return $ret;
         }
 
+        function getBulan($id = '', $sel = '') {
+            $months = array(
+                'Januari', 'Februari', 'Maret', 'April',
+                'Mei', 'Juni', 'Juli', 'Agustus',
+                'September', 'Oktober', 'November', 'Desember'
+            );
+        
+            $ret = "<select id=\"$id\" name=\"$id\" class=\"form-controls\" style=\"width:100px\">";
+            $ret .= "<option value=''>.: Pilihan Bulan :.</option>";
+        
+            foreach ($months as $key => $month) {
+                $value = $key + 1;
+                if(strlen($value) == 1){
+                    // Jika panjang $value 1 digit, ditambah 0
+                    $values = $values = str_pad($value, 2, '0', STR_PAD_LEFT);
+                } else {
+                    // Jika panjang $value lebih dari 1 digit, gunakan nilai aslinya
+                    $values = $value;
+                }
+                $selected = ($values == $sel) ? 'selected' : '';
+                $ret .= "<option value='$values' $selected>$month</option>";
+            }
+        
+            $ret .= "</select>";
+            return $ret;
+        }
+        
+        function getTahun($id="tahun", $sel="", $required="", $holder='.: Pilihan :.')
+        {
+            $html="<select id=\"$id\" name=\"$id\" $required style='width: 100px;' class=\"form-controls\">";
+            $html .= "<option value=''>".$holder."</option>";
+            for ($i=date('Y')-10;$i<=date('Y');$i++) {
+                $html.="<option value='$i' ".(($i==$sel)?"selected":"").">$i</option>";
+            }
+            $html.="</select>";
+            return $html;
+        }
+
         function listSkpd($id="idskpd",$sel="",$required=""){
             $ret = "<select id=\"$id\" name=\"$id\" class=\"form-controls\" $required style=\"width:auto\">";
             $ret.="<option value=\"\">-</option>";
@@ -171,6 +149,9 @@ function getPendsd(){
             $rs = $this->db->get_where($table, array($id=>$idagama))->row();
             return $rs->$name;
         }
+
+        
+        
     }
 
 /* @RendyAmdani*/

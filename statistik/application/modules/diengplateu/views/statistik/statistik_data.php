@@ -9,6 +9,25 @@
 <div class="row-fluid">
     <div class="col-lg-12" id="result-graph">
         <?php
+        $id_tahun = $this->input->post('id_tahun');
+        $id_bulan = $this->input->post('id_bulan');
+
+        if($id_tahun < date('Y')){			
+            $db = DB_STATISTIK;
+            $table = "tb_01_".$id_bulan."".$id_tahun;
+        }else{
+            if($id_bulan != date('m')){
+                $db = DB_STATISTIK;
+                $table = "tb_01_".$id_bulan."".$id_tahun;
+            }else{
+                $db = $this->db->database;
+                $table = "tb_01";
+            }
+        }
+        //cek tabel ada atau tidak
+        $rs = $this->db->query("SELECT COUNT(*) AS jml FROM information_schema.tables WHERE table_schema = '".$db."' AND table_name = '".$table."' LIMIT 1")->row();
+
+        if($rs->jml>0){
             switch($this->input->post('idkategori')){
                 case "statjenkel" : $this->load->view('diengplateu/statistik/statistik_statjenkel_graph'); break;
                 case "statagama" : $this->load->view('diengplateu/statistik/statistik_statagama_graph'); break;
@@ -26,10 +45,14 @@
                 case "statmarital" : $this->load->view('diengplateu/statistik/statistik_statmarital_graph'); break;
                 case "statkartu" : $this->load->view('diengplateu/statistik/statistik_statkartu_graph'); break;
             }
+        }else{
+            echo "Data tidak ditemukan";
+        }
         ?>
     </div>
     <div class="col-lg-12">
         <?php
+        if($rs->jml>0){
             switch($this->input->post('idkategori')){
                 case "statjenkel" : $this->load->view('diengplateu/statistik/statistik_statjenkel'); break;
                 case "statagama" : $this->load->view('diengplateu/statistik/statistik_statagama'); break;
@@ -48,6 +71,9 @@
                 case "statkartu" : $this->load->view('diengplateu/statistik/statistik_statkartu'); break;
                 case "statumum" : $this->load->view('diengplateu/statistik/statistik_statumum'); break;
             }
+        }else{
+            echo "";
+        }
         ?>
     </div>
 </div>

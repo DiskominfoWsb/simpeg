@@ -7,7 +7,7 @@ header("Content-Disposition: attachment; filename=Data Kepala OPD.xls");
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Daftar Kepala OPD Persen <?php echo date('d F Y')?></h1>
+        <h1 class="page-header">Daftar Kepala OPD Persen </h1>
     </div>
     <!-- /.col-lg-12 -->
 </div>
