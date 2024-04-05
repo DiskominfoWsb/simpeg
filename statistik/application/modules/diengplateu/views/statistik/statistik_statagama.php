@@ -82,7 +82,7 @@
                         <?php echo $x?>
                         <span class="ed1" style="display:none"><?=$item->idagama?></span>
                     </td>
-                    <td><?php echo $item->kategori.$id_bulan.$id_tahun?></td>
+                    <td><?php echo $item->kategori."tes".$id_bulan."tes".$id_tahun?></td>
                     <td><div class="text" align="right" data="0" jenkel="1" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria)?></div></td>
                     <td><div class="text" align="right" data="0" jenkel="2" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlwanita)?></div></td>
                     <td><div class="text" align="right" data="0" jenkel="sum" skpd="<?=$this->input->post('idskpd')?>" title="Lihat Detail"><?php echo number_format($item->jmlpria + $item->jmlwanita)?></div></td>
